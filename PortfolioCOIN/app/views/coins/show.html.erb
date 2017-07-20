@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @coin.name %>
+</p>
+
+<p>
+  <strong>Initial:</strong>
+  <%= @coin.initial %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @coin.amount %>
+</p>
+
+<p>
+  <strong>Purchaseprice:</strong>
+  <%= @coin.purchasePrice %>
+</p>
+
+<p>
+  <strong>Purchasedate:</strong>
+  <%= @coin.purchaseDate %>
+</p>
+
+<p>
+  <strong>Saledate:</strong>
+  <%= @coin.saleDate %>
+</p>
+
+<p>
+  <strong>Amountbuyinbtc:</strong>
+  <%= @coin.amountBuyInBTC %>
+</p>
+
+<p>
+  <strong>Amountsellinbtc:</strong>
+  <%= @coin.amountSellInBTC %>
+</p>
+
+<p>
+  <strong>Endoperation:</strong>
+  <%= @coin.endOPeration %>
+</p>
+
+<%= link_to 'Edit', edit_coin_path(@coin) %> |
+<%= link_to 'Back', coins_path %>

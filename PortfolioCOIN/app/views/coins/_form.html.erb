@@ -1,0 +1,62 @@
+<%= form_for(coin) do |f| %>
+  <% if coin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
+
+      <ul>
+      <% coin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :initial %>
+    <%= f.text_field :initial %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label :purchasePrice %>
+    <%= f.text_field :purchasePrice %>
+  </div>
+
+  <div class="field">
+    <%= f.label :purchaseDate %>
+    <%= f.date_select :purchaseDate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :saleDate %>
+    <%= f.date_select :saleDate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amountBuyInBTC %>
+    <%= f.text_field :amountBuyInBTC %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amountSellInBTC %>
+    <%= f.text_field :amountSellInBTC %>
+  </div>
+
+  <div class="field">
+    <%= f.label :endOPeration %>
+    <%= f.text_field :endOPeration %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
